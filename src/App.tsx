@@ -13,20 +13,24 @@ import Contact from './pages/Contact';
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HeroSection />} />
-        <Route path="/hairstyles" element={<Hairstyles />} />
-        <Route path="/makeup" element={<Makeup />} />
-        <Route path="/nails" element={<Nails />} />
-        <Route path="/eyelashes" element={<Eyelashes />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div className="flex flex-col min-h-screen">
+      <Router>
+        <Header />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<HeroSection />} />
+            <Route path="/hairstyles" element={<Hairstyles />} />
+            <Route path="/makeup" element={<Makeup />} />
+            <Route path="/nails" element={<Nails />} />
+            <Route path="/eyelashes" element={<Eyelashes />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
+    </div>
   );
 };
 
